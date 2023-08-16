@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Welcome, {{ user.username }}</h1>
+
+  <h2>Your ACMs:</h2>
+  <ul>
+    {% for acm in acms %}
+      <li>{{ acm.name }}</li>
+    {% endfor %}
+  </ul>
+
+  <h2>Clients:</h2>
+  <ul>
+    {% for client in clients %}
+      <li>{{ client.client_name }} - {{ client.product_name }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
